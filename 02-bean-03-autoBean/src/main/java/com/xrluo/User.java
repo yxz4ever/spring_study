@@ -2,8 +2,8 @@ package com.xrluo;
 
 import org.springframework.stereotype.Component;
 
+
 @Component()
-// @Named("hahah")
 public class User {
     private String name;
     private Integer age;

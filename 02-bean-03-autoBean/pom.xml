@@ -5,22 +5,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.xrluo</groupId>
-    <artifactId>autoBean</artifactId>
+    <artifactId>03-autoBean</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>自动装配Bean</name>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>5.3.0</version>
-        </dependency>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <java.version>1.8</java.version>
+    </properties>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-beans</artifactId>
-            <version>5.3.0</version>
-        </dependency>
+    <dependencies>
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -35,7 +31,6 @@
             <version>5.3.0</version>
         </dependency>
 
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -43,11 +38,12 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- 为了使用named注解 -->
         <dependency>
-            <groupId>javax.inject</groupId>
-            <artifactId>javax.inject</artifactId>
-            <version>1</version>
+            <groupId>com.github.stefanbirkner</groupId>
+            <artifactId>system-rules</artifactId>
+            <version>1.19.0</version>
+            <scope>test</scope>
+
         </dependency>
 
 
