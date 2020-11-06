@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c" xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="com.xrluo.classes.Song" id="s" c:name="abc123" c:author="氷落123">
+        <!--<property name="author" value="氷落" />-->
+        <!--<property name="name" value="abc" />-->
+    </bean>
+
+    <bean class="com.xrluo.classes.User" c:song-ref="s"/>
+</beans>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="song" class="com.xrluo.classes.Song">
+        <property name="name" value="笑傲江湖1"/>
+        <property name="author" value="令狐冲1"/>
+    </bean>
+
+    <bean class="com.xrluo.classes.User">
+        <constructor-arg ref="song"/>
+    </bean>
+
+</beans>
