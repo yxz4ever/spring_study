@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <beans profile="dev">
+        <bean id="test1" class="com.xrluo.classes.ProfileDemo">
+            <property name="st" value="dev环境"/>
+        </bean>
+    </beans>
+
+
+    <beans profile="prod">
+        <bean id="test1" class="com.xrluo.classes.ProfileDemo">
+            <property name="st" value="prod环境"/>
+        </bean>
+    </beans>
+</beans>
