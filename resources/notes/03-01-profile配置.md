@@ -200,3 +200,51 @@
 
 7. 此处环境变量spring.profiles.active没有加明白,所以只是简单测试了一下  **源代码模块:03-profile-01-profile**
 
+
+
+## 4. 处理自动装配的歧义性
+
+1. 标示首选的bean (primary)  @Primary 
+    1. 用法  与@Component  和 @Bean一起使用
+    2. xml中 使用primary属性   primary="true"
+    3. 弊端:当同一类型的bean,使用@Primary数量超过一个时,我们并没有其他办法缩小范围
+2. 限定自动装配   限定符(@Qualifier)
+    1. 用法: 它可以与@Autowired 和@Inject协同使用
+    2. 例如: @Qualifier("iceCream")参数就是要注入的bean的ID
+    3. 弊端:如果重构了类名,会导致注入失败
+3. 创建自定义的限定符
+    1. 用法:与@Component或@Bean使用,意为为bean指定限定符名称,不用担心重构类名的问题
+4. 使用自定义限定符
+    1. 想使用多个限定符注解的时候,我们可以自定义注解,上面使用@Qualifier("xxxx")注解就可以.
+
+
+
+## 5. bean的作用域
+
+1. 单例:整个应用中,只创建bean的一个实例(默认)
+2. 原型:每次注入或通过Spring应用上下文获取的时候都会创建一个新的bean实例.
+3. 会话:在web应用中,每个会话创建一个bean实例
+4. 请求,在web应用中,为每个请求创建一个bean实例
+5. <span style="color:red">此处重点部分在于如何应用到实际情况当中.留待后续补充@TODO</span>
+
+
+
+## 6. 注入外部值
+
+1. @PropertySource("classpath:/com/xxx/xxx.properties") 外部配置文件(数据源)
+2. 使用Environment.getProperty("xxxx")获取属性值
+3. 使用@Value("xxxx") 获取属性值
+
+
+
+## 7. 属性占位符
+
+${...}   
+
+<span style="color:red" >留待后续补充@TODO</span>
+
+## 8.SpEL表达式
+
+#{...}
+
+<span style="color:red" >留待后续补充@TODO</span>
